@@ -525,6 +525,20 @@
 
 </div>
 
+<app-chart-test></app-chart-test>
+
+<div>
+    <canvas #mycanvas01></canvas>
+    <p>GABAGABA(MixedChartCtrl)</p>
+</div>
+
+<div ng-app="app">
+<script src="node_modules/angular/angular.min.js"></script>
+<script src="node_modules/chart.js/dist/Chart.min.js"></script>
+<script src="node_modules/angular-chart.js/dist/angular-chart.min.js"></script>
+<script src="assets/mixedtypechart.js"></script>
+</div>
+
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 <!-- * * * * * * * * * * * The content above * * * * * * * * * * * -->
 <!-- * * * * * * * * * * is only a placeholder * * * * * * * * * * -->
@@ -532,8 +546,4 @@
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
 <!-- * * * * * * * * * * End of Placeholder * * * * * * * * * * * -->
 <!-- * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * -->
-
-<script src="assets/hello.js"></script>
-<app-chart-test></app-chart-test>
-
 <router-outlet></router-outlet>
