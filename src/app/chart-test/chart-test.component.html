@@ -1,31 +1,32 @@
- <div><p>HOGEHOGEHOGE(app-chart-test)</p></div>
- <h2>{{chart_id.name | uppercase}} Details</h2>
- <div><span>id: </span>{{chartslist.id}}</div>
- <div>
-   <label>name:
-     <input [(ngModel)]="chart_id.name" placeholder="name"/>
-   </label>
-
- </div>
- <h2>FundList</h2>
+<div><p>HOGEHOGEHOGE(app-chart-test)</p></div>
+<h2>{{ chart_id.name | uppercase }} Details</h2>
+<div><span>id: </span>{{ chartslist.id }}</div>
+<div>
+  <label
+    >name:
+    <input [(ngModel)]="chart_id.name" placeholder="name" />
+  </label>
+</div>
+<h2>FundList</h2>
 <ul class="chartslist">
- <li *ngFor="let chart of chartslist"
-   [class.selected]="chart === selectedChart"
-   (click)="onSelect(chart)">
-   <span class="badge">{{chart.id}}</span> {{chart.name}}
- </li>
+  <li
+    *ngFor="let chart of chartslist"
+    [class.selected]="chart === selectedChart"
+    (click)="onSelect(chart)"
+  >
+    <span class="badge">{{ chart.id }}</span> {{ chart.name }}
+  </li>
 </ul>
 
 <div *ngIf="selectedChart">
-
- <h2>{{selectedChart.name | uppercase}} Details</h2>
- <div><span>id: </span>{{selectedChart.id}}</div>
- <div>
-   <label>name:
-     <input [(ngModel)]="selectedChart.name" placeholder="name"/>
-   </label>
- </div>
-
+  <h2>{{ selectedChart.name | uppercase }} Details</h2>
+  <div><span>id: </span>{{ selectedChart.id }}</div>
+  <div>
+    <label
+      >name:
+      <input [(ngModel)]="selectedChart.name" placeholder="name" />
+    </label>
+  </div>
 </div>
 
-<app-chart-detail [chart]="selectedChart"></app-chart-detail>
+<a href="/chart-detail">Check chart detail</a>
